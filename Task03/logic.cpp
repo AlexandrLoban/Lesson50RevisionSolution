@@ -7,3 +7,21 @@
 // Дополнительно в функции необходимо предусмотреть механизм "защиты от дурака"
 // для работы с некорректными данными (в данном случае функция должна 
 // возвращать значение false).
+#include "logic.h"
+
+bool is_the_same_elements(int array[], int size) {
+	if (size < 2) {
+		return false;
+	}
+
+	for (int i = 0; i < size-1; i++) {
+		for (int q = i+1; q < size; q++) {
+			if (array[i] == array[q]) {
+				return true;
+			}
+		}
+
+	}
+
+	return false;
+}
