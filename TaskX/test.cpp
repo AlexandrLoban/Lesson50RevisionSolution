@@ -17,8 +17,10 @@ string convert(int array[], int size) {
 	return s;
 }
 
-void print(int array[], int expected[], int size,
+void print(int* array, int* expected, int size,
 	int a, int b, string name) {
+
+	string before = convert(array, size);
 
 	reverse(array, size, a, b);
 
@@ -39,7 +41,7 @@ void print(int array[], int expected[], int size,
 
 	if (size > 0) {
 		msg += "a = " + to_string(a) + "; b = " + to_string(b) + "\n";
-		msg += "Array before:\t" + convert(array, size) + "\n";
+		msg += "Array before:\t" + before + "\n";
 		msg += "Array after:\t" + convert(array, size) + "\n";
 	}
 
