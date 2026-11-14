@@ -11,3 +11,30 @@
 // 
 // Далее необходимо разработать полноценный или тестовый проект для полной 
 // демонстрации работоспособности данной функции.
+#include "logic.h"
+
+double get_average(double* array, int size) {
+	double sum = 0;
+
+	for (int i = 0; i < size; i++) {
+		sum += array[i];
+
+	}
+
+	return double(sum / size);
+}
+
+double get_sum(double* array, int size, double average) {
+	if (size <= 0 or size > DEFAULT_SIZE) {
+		return -1;
+	}
+
+	double sum = 0;
+	for (int i = 0; i < size; i++) {
+		if (array[i] < average) {
+			sum += array[i];
+		}
+
+	}
+	return sum;
+}
