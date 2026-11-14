@@ -19,6 +19,8 @@ string convert(int array[], int size) {
 
 void print(int array[], int expected[], int size, string name) {
 
+	string before = convert(array, size);
+
 	reverse(array, size);
 
 	bool result = true;
@@ -37,7 +39,7 @@ void print(int array[], int expected[], int size, string name) {
 	msg += "\033[0m";
 
 	if (size > 0) {
-		msg += "Array before:\t" + convert(array, size) + "\n";
+		msg += "Array before:\t" + before + "\n";
 		msg += "Array after:\t" + convert(array, size) + "\n";
 	}
 

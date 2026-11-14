@@ -3,4 +3,4 @@
 #define DEFAULT_SIZE 100
 using namespace std;
 
-void reverse(int array[], int size);
+void reverse(int* array, int size);
