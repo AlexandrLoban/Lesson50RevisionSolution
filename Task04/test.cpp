@@ -18,7 +18,10 @@ string convert(int array[], int size) {
 }
 
 void print(int array[], int expected[], int size, string name) {
-	swap_extrem_elements(array, size);
+	int max = find_max_element(array, size);
+	int min = find_min_element(array, size);
+
+	swap_extrem_elements(array, size, max, min);
 	
 	bool result = true;
 
